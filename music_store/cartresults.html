@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="music_store/960.css" />
+
+
+  <script>
+    window.onload = function () {
+        var cartList = sessionStorage.getItem('cartList');
+        var itemsInCart = document.getElementById('items');
+        for (var i=0; i < Database.length; i++) {
+            if (cartList == (Database[i].id)) {
+            document.getElementById("items").innerHTML = ((Database[i].artist) + 'n/');
+            }
+        }
+    };
+
+
+    </script>
+    <script src="js/store.js"></script>
+    <script src="js/cart.js"></script>
